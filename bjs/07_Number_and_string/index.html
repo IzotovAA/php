@@ -1,32 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Калькулятор</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" type="text/css"/>
-</head>
-<body>
-<div class="container">
-    <div class="row calc-row align-items-center">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row calc-row align-items-center">
         <div class="col col-md-4 offset-md-4">
-            <div class="form-group">
-                <div class="card" id="calc">
-                    <div class="card-body">
-                        <input class="form-control input-window" id="inputWindow" value="">
-                        <div class="row no-gutters">
-                            <div class="col">
-                                <button class="btn btn-outline-danger form-control" id="btn_clr">C</button>
-                            </div>
-                        </div>
-                    </div>
+          <div class="form-group">
+            <div class="card" id="calc">
+              <div class="card-body">
+                <input
+                  class="form-control input-window"
+                  id="inputWindow"
+                  value=""
+                />
+                <div class="row no-gutters">
+                  <div class="col">
+                    <button
+                      class="btn btn-danger form-control mar_b"
+                      id="btn_clr"
+                    >
+                      C
+                    </button>
+                  </div>
                 </div>
+                <div class="row no-gutters">
+                  <div class="col mar_r">
+                    <button
+                      class="btn btn-primary form-control mar_b"
+                      id="btn_1"
+                    >
+                      1
+                    </button>
+                    <button
+                      class="btn btn-primary form-control mar_b"
+                      id="btn_4"
+                    >
+                      4
+                    </button>
+                    <button
+                      class="btn btn-primary form-control mar_b"
+                      id="btn_7"
+                    >
+                      7
+                    </button>
+                    <button
+                      class="btn btn-primary form-control"
+                      id="btn_result"
+                    >
+                      &#61;
+                    </button>
+                  </div>
+
+                  <div class="col mar_r">
+                    <button
+                      class="btn btn-primary form-control mar_b"
+                      id="btn_2"
+                    >
+                      2
+                    </button>
+                    <button
+                      class="btn btn-primary form-control mar_b"
+                      id="btn_5"
+                    >
+                      5
+                    </button>
+                    <button
+                      class="btn btn-primary form-control mar_b"
+                      id="btn_8"
+                    >
+                      8
+                    </button>
+                    <button
+                      class="btn btn-primary form-control mar_b"
+                      id="btn_0"
+                    >
+                      0
+                    </button>
+                  </div>
+
+                  <div class="col mar_r">
+                    <button
+                      class="btn btn-primary form-control mar_b"
+                      id="btn_3"
+                    >
+                      3
+                    </button>
+                    <button
+                      class="btn btn-primary form-control mar_b"
+                      id="btn_6"
+                    >
+                      6
+                    </button>
+                    <button
+                      class="btn btn-primary form-control mar_b"
+                      id="btn_9"
+                    >
+                      9
+                    </button>
+                    <button class="btn btn-primary form-control" id="btn_sqrt">
+                      &#8730;
+                    </button>
+                  </div>
+
+                  <div class="col">
+                    <button
+                      class="btn btn-primary form-control mar_b"
+                      id="btn_sum"
+                    >
+                      &#43;
+                    </button>
+                    <button
+                      class="btn btn-primary form-control mar_b"
+                      id="btn_dif"
+                    >
+                      &#8722;
+                    </button>
+                    <button
+                      class="btn btn-primary form-control mar_b"
+                      id="btn_mult"
+                    >
+                      &#215;
+                    </button>
+                    <button class="btn btn-primary form-control" id="btn_div">
+                      &#247;
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
