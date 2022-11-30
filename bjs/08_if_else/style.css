@@ -2,6 +2,10 @@ body {
   background-color: rgb(195, 195, 210);
 }
 
+.col {
+  min-width: min-content;
+}
+
 .game-card {
   height: 100vh;
   font-family: "Open Sans", monospace;
