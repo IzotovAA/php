@@ -32,7 +32,7 @@ document.querySelector("#btn_clr").addEventListener("click", () => {
 // --- по нажатию цифровых кнопок записывает их значение в инпут ---
 digitalButtonsArray.forEach((element) => {
   document.querySelector("#btn_" + element).addEventListener("click", () => {
-    if (result === true) {
+    if (result) {
       inputWindow.value = element;
       result = false;
     } else {
@@ -47,7 +47,7 @@ digitalButtonsArray.forEach((element) => {
 //
 // --- модификация равно ---
 document.querySelector("#btn_result").addEventListener("click", () => {
-  if (doubleOperator === true) {
+  if (doubleOperator) {
     inputWindow.value = inputWindow.value;
   } else if (operation === "sum") {
     findPosition(previusOperator);
@@ -116,7 +116,7 @@ document.querySelector("#btn_sum").addEventListener("click", () => {
   // ...
 
   // блокировка дополнительных операторов после плюса
-  if (doubleOperator === true) {
+  if (doubleOperator) {
     inputWindow.value = inputWindow.value;
   }
   // ...
@@ -223,7 +223,7 @@ document.querySelector("#btn_dif").addEventListener("click", () => {
   // ...
 
   // блокировка дополнительных операторов после минуса
-  else if (doubleOperator === true) {
+  else if (doubleOperator) {
     inputWindow.value = inputWindow.value;
   }
   // ...
@@ -288,7 +288,7 @@ document.querySelector("#btn_dif").addEventListener("click", () => {
 // --- модификация умножения ---
 document.querySelector("#btn_mult").addEventListener("click", () => {
   // блокировка дополнительных операторов после *
-  if (doubleOperator === true) {
+  if (doubleOperator) {
     inputWindow.value = inputWindow.value;
   }
   // ...
@@ -350,7 +350,7 @@ document.querySelector("#btn_mult").addEventListener("click", () => {
 // --- модификация деления ---
 document.querySelector("#btn_div").addEventListener("click", () => {
   // блокировка дополнительных операторов после /
-  if (doubleOperator === true) {
+  if (doubleOperator) {
     inputWindow.value = inputWindow.value;
   }
   // ...

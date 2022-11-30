@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(195, 195, 210);
+}
+
 .game-card {
   height: 100vh;
   font-family: "Open Sans", monospace;
@@ -15,4 +19,48 @@
 
 .card-footer {
   background-color: rgb(20, 90, 30);
+}
+
+.modal-header {
+  background-color: rgb(20, 90, 30);
+  color: antiquewhite;
+}
+
+.modal-footer {
+  background-color: rgb(20, 90, 30);
+}
+
+.modal-body {
+  min-height: 100px;
+  background-color: rgb(60, 60, 150);
+  color: antiquewhite;
+}
+
+.div-inp {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.input-max {
+  margin-bottom: 20px;
+}
+
+.input {
+  border: 3px solid rgb(20, 170, 180);
+  border-radius: 5px;
+  width: 100%;
+  background-color: rgb(60, 60, 150);
+  color: antiquewhite;
+}
+
+.input:hover {
+  background-color: rgb(30, 200, 210);
+  color: black;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px lightskyblue;
+  background-color: rgb(30, 200, 210);
+  color: black;
 }
