@@ -135,6 +135,20 @@ buttonOk.addEventListener("click", () => {
   minValue = parseInt(inputWindowMin.value);
   maxValue = parseInt(inputWindowMax.value);
 
+  // округление до 999
+  // исправление ошибки при вводе положительного числа больше 999 в минимум
+  // аналогично с максимумом
+  minValue > 999 ? (minValue = 999) : (minValue = minValue);
+  maxValue < -999 ? (maxValue = -999) : (maxValue = maxValue);
+  // ...
+
+  // проверка минимума и максимума
+  // если минимальное меньше -999, то значение устанавливается -999
+  // аналогично с максимумом
+  minValue < -999 ? (minValue = -999) : (minValue = minValue);
+  maxValue > 999 ? (maxValue = 999) : (maxValue = maxValue);
+  // ...
+
   // проверка введённых данных
   // если введено не число установка значений по умолчанию
   if (isNaN(minValue) || isNaN(maxValue)) {
@@ -146,13 +160,6 @@ buttonOk.addEventListener("click", () => {
     minValue = 0;
     maxValue = 100;
   }
-  // ...
-
-  // проверка минимума и максимума
-  // если минимальное меньше -999, то значение устанавливается -999
-  // аналогично с максимумом
-  minValue < -999 ? (minValue = -999) : (minValue = minValue);
-  maxValue > 999 ? (maxValue = 999) : (maxValue = maxValue);
   // ...
 
   modalWindow.hide(); // закрытие модального окна диапазона
