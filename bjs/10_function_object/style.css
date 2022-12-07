@@ -1,0 +1,31 @@
+body {
+  background-image: url(img/body.jpg);
+  background-size: cover;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card {
+  border: 3px rgb(80, 70, 160) solid;
+  border-radius: 30px;
+  box-shadow: 0 0 50px rgba(220, 220, 15, 0.9);
+  margin-top: 100px;
+  background-color: rgb(215, 255, 255);
+  min-width: 400px;
+}
+
+.card-header {
+  font-size: 1.2rem;
+}
+
+.clear {
+  margin-left: 40px;
+}
+
+button {
+  border: 1px rgb(80, 70, 160) solid !important;
+  border-radius: 10px !important;
+}
+
+button:hover {
+  box-shadow: 0 0 30px rgba(220, 220, 15, 0.9);
+}
