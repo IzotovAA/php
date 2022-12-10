@@ -150,13 +150,55 @@ const personGenerator = {
   },
   //...
 
-  // генерация отчества
+  // генерация отчества из объекта заготовки
+  // randomSecondName: function () {
+  //   if (this.person.gender === "Мужчина,") {
+  //     return `${this.randomValue(this.secondNameJson)}ич`;
+  //   } else return `${this.randomValue(this.secondNameJson)}на`;
+  // },
+  //...
+
+  // генерация отчества из объекта с мужскими именами
   randomSecondName: function () {
+    let name = this.randomValue(this.firstNameMaleJson);
     if (this.person.gender === "Мужчина,") {
-      return `${this.randomValue(this.secondNameJson)}ич`;
-    } else return `${this.randomValue(this.secondNameJson)}на`;
+      if (name === "Никита") {
+        return "Никитич";
+      } else if (name === "Михаил") {
+        return "Михайлович";
+      } else if (
+        name[name.length - 1] === "й" ||
+        name[name.length - 1] === "а"
+      ) {
+        return `${name.slice(0, -1)}евич`;
+      } else return `${name}ович`;
+    } else {
+      if (name === "Никита") {
+        return "Никитична";
+      } else if (name === "Михаил") {
+        return "Михайлович";
+      } else if (
+        name[name.length - 1] === "й" ||
+        name[name.length - 1] === "а"
+      ) {
+        return `${name.slice(0, -1)}евна`;
+      } else return `${name}овна`;
+    }
   },
   //...
+  // Отчества
+  // мужские окончания -ович/-евич/-ич
+  // женские окончания -овна/-евна/-ична/-инична
+  // "id_1": "Александр", Александрович, Александровна
+  // "id_2": "Максим", Максимович, Максимовна
+  // "id_3": "Иван", Иванович, Ивановна
+  // "id_4": "Артём", Артёмович, Артёмовна
+  // "id_5": "Дмитрий", Дмитриевич, Дмитриевна
+  // "id_6": "Никита", Никитич, Никитична
+  // "id_7": "Михаил", Михаилович, Михаиловна и Михайлович, Михайловна
+  // "id_8": "Даниил", Даниилович, Данииловна
+  // "id_9": "Егор", Егорович, Егоровна
+  // "id_10": "Андрей" Андреевич, Андреевна
 
   // генерация фамилии
   randomSurname: function () {
@@ -181,7 +223,7 @@ const personGenerator = {
       result = this.randomIntNumber(30, 1);
     } else result = this.randomIntNumber(31, 1);
     return (result +=
-      " " + month + " " + this.randomIntNumber(2005, 1970) + " " + "года");
+      " " + month + " " + this.randomIntNumber(2000, 1970) + " " + "года");
   },
   //...
 
