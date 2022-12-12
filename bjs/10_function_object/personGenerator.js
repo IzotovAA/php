@@ -153,7 +153,7 @@ const personGenerator = {
       if (name === "Никита") {
         return "Никитична";
       } else if (name === "Михаил") {
-        return "Михайлович";
+        return "Михайловна";
       } else if (
         name[name.length - 1] === "й" ||
         name[name.length - 1] === "а"
